@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    overflow: hidden; /* Prevents scrolling */
+    background: linear-gradient(to top right, #4b0082, #010138); /* Dark purple to dark blue gradient */
+    color: #ffffff;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar {
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Vertically center items */
+    background: linear-gradient(to right, #010138, #0b1147); /* Dark blue gradient for navbar */
+    padding: 10px 20px; /* Add padding */
+    border-radius: 20px; /* Rounded bottom corners */
+}
+
+.navbar .logo {
+    margin: 0;
+}
+
+.navbar .logo img {
+    width: 140px; /* Adjust the width of the logo */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure the image behaves as a block element */
+    margin-right: 10px; /* Add some spacing between the logo and the navigation links */
+}
+
+.navbar .logo a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar nav ul li {
+    margin-left: 20px;
+}
+
+.navbar nav ul li a {
+    color: #8bd1d3; /* Text color */
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px; /* Increase padding */
+    border-radius: 20px; /* Rounded corners */
+    background-color: rgba(255, 255, 255, 0.3); /* White transparent background */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.navbar nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.5); /* Lighter transparent background on hover */
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: 60px; /* Adjust to the height of the navbar */
+}
+
+.hero-text {
+    position: relative;
+    z-index: 1;
+    transition: color 1s ease;
+}
+
+.hero-text a {
+    color: #2d59d3; /* Color for the hyperlinks */
+}
+
+.light {
+    position: absolute;
+    border-radius: 50%;
+    width: 250px; /* Increased by 25px */
+    height: 250px; /* Increased by 25px */
+    pointer-events: none;
+    background: radial-gradient(circle, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 60%);
+    mix-blend-mode: screen;
+    z-index: 0;
+    transition: left 0.1s ease, top 0.1s ease;
+}
+
+.section {
+    padding: 50px 0;
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.project {
+    background: #2f2f2f;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+footer {
+    background: #1f1f1f;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
